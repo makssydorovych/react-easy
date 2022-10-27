@@ -1,13 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      12121
-    </div>
-  );
+
+
+    return (
+        <div>
+            APP
+        </div>
+    );
+}
+
+function Rating() {
+    return (
+        <>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+        </>
+    )
+        ;
+}
+function Accordion () {
+    return(
+        <div>
+            <h3>Menu</h3>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    )
 }
 
 export default App;
