@@ -7,14 +7,14 @@ import {OnOff} from "./components/OnOff/OnOff";
 
 function App() {
     return (
-        <div>
+        <div className={"app"}>
             <PageTitle title={"This is App"}/>
             <OnOff />
             <OnOff />
-            <Rating value={2}/>
+            <Rating />
             <Accordion titleValue={"Accordion"} />
             <Accordion titleValue={"Accordion Two"} />
-            <Rating value={4}/>
+            <Rating />
         </div>
     );
 }
