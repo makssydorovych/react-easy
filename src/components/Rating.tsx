@@ -6,13 +6,13 @@ type RatingPropsType = {
 
 export function Rating(props: RatingPropsType) {
 
-    const [star, setStar] = useState(false)
+    const [value, setValue] = useState(0)
     return (<>
-        <Star selected={star}></Star> <button onClick={() => {setStar(!star)}}>1</button>
-        <Star selected={star}></Star>  <button>2</button>
-        <Star selected={star}></Star><button>3</button>
-        <Star selected={star}></Star> <button>4</button>
-        <Star selected={star}></Star>  <button>5</button>
+        <Star selected={value === 0}></Star> <button onClick={() => {setValue(+1    )}}>1</button>
+        <Star selected={value > 1}></Star>  <button onClick={() => {setValue(+1    )}}>2</button>
+        <Star selected={value > 2}></Star><button onClick={() => {setValue(+1    )}}>3</button>
+        <Star selected={value > 3}></Star> <button onClick={() => {setValue(+1    )}}>4</button>
+        <Star selected={value > 4}></Star>  <button onClick={() => {setValue(+1    )}}>5</button>
     </>)
 
 }
