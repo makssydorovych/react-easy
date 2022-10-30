@@ -4,6 +4,8 @@ import './App.css';
 import {Accordion} from "./components/Accordion";
 import {RaitingValueType, Rating} from "./components/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/OnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
 
 
 function App() {
@@ -14,9 +16,10 @@ function App() {
         <div className={"app"}>
             <PageTitle title={"This is App"}/>
             <OnOff on={switchOn} onChange={setSwitchOn}/>
-
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
             <Rating value={ratingValue} onClick={(on) => setRatingValue(on)}/>
             <Accordion titleValue={"Accordion"} collapsed={accordionCollapsed} onChange={setAccordionCollapsed}/>
+            <UncontrolledAccordion titleValue={"blabla"}/>
 
         </div>
     );
