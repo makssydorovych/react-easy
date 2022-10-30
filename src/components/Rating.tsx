@@ -1,31 +1,35 @@
 import React, {useState} from "react";
 
+export type RaitingValueType= 0 |1 | 2 | 3 | 4 | 5
 type RatingPropsType = {
-    // value: number
+    value: RaitingValueType
+    onClick: (value: RaitingValueType) => void
 }
 
 export function Rating(props: RatingPropsType) {
 
-    const [value, setValue] = useState(0)
+
     return (<>
-        <Star selected={value === 0}></Star> <button onClick={() => {setValue(+1    )}}>1</button>
-        <Star selected={value > 1}></Star>  <button onClick={() => {setValue(+1    )}}>2</button>
-        <Star selected={value > 2}></Star><button onClick={() => {setValue(+1    )}}>3</button>
-        <Star selected={value > 3}></Star> <button onClick={() => {setValue(+1    )}}>4</button>
-        <Star selected={value > 4}></Star>  <button onClick={() => {setValue(+1    )}}>5</button>
+        <Star selected={props.value > 0} onClick={props.onClick} value={1}/>
+        <Star selected={props.value > 1} onClick={props.onClick} value={2}/>
+        <Star selected={props.value > 2} onClick={props.onClick} value={3}/>
+        <Star selected={props.value > 3} onClick={props.onClick} value={4}/>
+        <Star selected={props.value > 4} onClick={props.onClick} value={5}/>
     </>)
 
 }
 
 type StarPropsType = {
     selected: boolean
+    value: RaitingValueType
+    onClick: (value: RaitingValueType) => void
 }
 
 function Star(props: StarPropsType) {
-    if (props.selected) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
+    return <span onClick={ () => {
+
+        props.onClick(props.value) }}>
+        {props.selected ? <b> Star </b> : " Star "}
+    </span>
 
 }
