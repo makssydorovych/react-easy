@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
-// type RatingPropsType = {
-//     // value: number
-// }
+ export type UncontrolledRatingPropsType = {
+    defaultValue?: 0 | 1 | 2 | 3 | 4 | 5
+}
 
-export function UncontrolledRating() {
+export function UncontrolledRating(props: UncontrolledRatingPropsType) {
 
     const [value, setValue] = useState(0)
     return (<>

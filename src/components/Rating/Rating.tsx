@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
-export type RaitingValueType= 0 |1 | 2 | 3 | 4 | 5
-type RatingPropsType = {
-    value: RaitingValueType
-    onClick: (value: RaitingValueType) => void
+export type RatingValueType=  0 | 1 | 2 | 3 | 4 | 5;
+export type RatingPropsType = {
+    value: RatingValueType
+    onClick: (value: RatingValueType) => void
 }
 
 export function Rating(props: RatingPropsType) {
@@ -21,8 +21,8 @@ export function Rating(props: RatingPropsType) {
 
 type StarPropsType = {
     selected: boolean
-    value: RaitingValueType
-    onClick: (value: RaitingValueType) => void
+    value: RatingValueType
+    onClick: (value: RatingValueType) => void
 }
 
 function Star(props: StarPropsType) {

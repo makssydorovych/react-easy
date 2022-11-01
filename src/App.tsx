@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 
 import './App.css';
-import {Accordion} from "./components/Accordion";
-import {RaitingValueType, Rating} from "./components/Rating";
+import {Accordion} from "./components/Accordion/Accordion";
+import {RatingValueType, Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/OnOff";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 
 function App() {
-    let[ratingValue, setRatingValue] = useState<RaitingValueType>(0)
+    let[ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let[accordionCollapsed, setAccordionCollapsed] = useState(false)
     let[switchOn, setSwitchOn] = useState(true)
     return (
