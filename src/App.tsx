@@ -25,7 +25,7 @@ function App() {
                            value: 3
                        }, {title: "Viktor", value: 4}]} onClick={() => {
             }}/>
-            <UncontrolledAccordion titleValue={"blabla"}/>
+            <UncontrolledAccordion titleValue={"Uncontrolled Accordion"}/>
         <Select value={false} onChange={()=>{}} items={[{title: "Alex", value: 1}, {title: "Tom", value: 2}, {title: "Anna", value: 3}, {title: "Viktor", value: 4}]}/>
         </div>
     );
